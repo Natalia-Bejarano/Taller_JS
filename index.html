@@ -4,8 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/src/css/styles.css">
 </head>
 <body>
+    <section> 
+        <div class="card">
+            <img src="" alt="" id="pokemon-img">
+            <h1 id="pokemon-name" class="name"></h1>
+            <p id="pokemon-id"></p>
+            <div class="types">
+                <span class=""></span>
+            </div>
+            <button id="prev" class="btcN"></button>
+            <button id="next" class="btcP"></button>
+        </div>
+        <div id="pokemon-modal" class="modal hidden">
+        <div class="modal-content">
+            <span id="close-modal">&times;</span>
+            <h2 id="modal-name"></h2>
+            <img id="modal-img" src="" alt="pokemon grande">
+
+            <p id="modal-id" class="pokemon-id"></p>
+
+            <div class="modal-info">
+            <p><strong>Altura:</strong> <span id="modal-height"></span> m</p>
+            <p><strong>Peso:</strong> <span id="modal-weight"></span> kg</p>
+            <p><strong>Habilidades:</strong> <span id="modal-abilities"></span></p>
+            </div>
+
+            <div id="modal-stats" class="modal-stats"></div>
+        </div>
+        </div>
     
+    </section>
+    <script type="module" src="/src/main.js"></script>
 </body>
 </html>

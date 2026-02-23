@@ -1,0 +1,37 @@
+:root {
+ --white : #FFFFFF;
+ --fondo : #8d8d8d;
+ --negro : #000000;
+ --card-size : 170px, 140px;
+
+}
+
+button{
+    padding: 0px;
+    border: 0px;
+
+}
+.btcN{
+    padding: 10px 30px;
+}
+.btcP{
+    padding: 10px 30px;
+}
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.card{
+    padding: 40px;
+    border: var(--negro);
+    border-radius: 2px;
+    margin: 2px;
+    background-color: var(--fondo);
+}
+section{
+    display: flex;
+    flex-direction: row;
+    
+}
