@@ -2,36 +2,191 @@
  --white : #FFFFFF;
  --fondo : #8d8d8d;
  --negro : #000000;
+ --accent-color: #617665;
  --card-size : 170px, 140px;
+ --background : #2d3cff;
 
 }
+body {
+    
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background: var(--background);
+    font-family: sans-serif;
+    margin: 0;
+}
+
 
 button{
     padding: 0px;
     border: 0px;
+    cursor: pointer;
 
 }
+/*tipos de pokemon y sus colores*/
+.type.normal { background: #bdbdbd; color: #000; }
+.type.electric { background: #f7d02c; color: #000; }
+.type.fire { background: #ee8130; }
+.type.ground { background: #833900; }
+.type.rock { background: #e9d45f; color: #000; }
+.type.water { background: #6390f0; }
+.type.grass { background: #7ac74c; }
+.type.bug { background: #729f3f; }
+.type.flying { background: #3dc7ef; }
+.type.ice { background: #9be9ff; color: #000; }
+.type.poison { background: #9e0a72; }
+.type.fairy { background: #ff87db; }
+.type.fighting { background: #d33333; }
+.type.psychic { background: #aa0080; }
+.type.steel { background: #616161; }
+.type.ghost { background: #313d70; }
+.type.dark { background: #222222; }
+.type.dragon { background: #3f23bb; }
+
+.types{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 8px 0 18px;
+}
+
 .btcN{
-    padding: 10px 30px;
+    background: #215e7e;
+    color: var(--white);
+    font-weight: 700;
+    border-radius: 10px;
+    padding: 12px 18px;
+    min-width: 140px;
+    transition: transform 0.08s ease, filter 0.15s ease;
 }
+.btcN:hover, .btcP:hover {
+    filter: brightness(1.07);
+}
+
+.btcP:active, .btcN:active{
+    transform: scale(0.98);
+}
+
 .btcP{
-    padding: 10px 30px;
-}
-body {
-    font-family: sans-serif;
-    margin: 0;
-    padding: 0;
+     padding: 12px 18px;
+    background: #1d7a9a;
+    color: var(--white);
+    font-weight: 700;
+    border-radius: 10px;
+    min-width: 140px;
+    transition: transform 0.08s ease, filter 0.15s ease;
 }
 
 .card{
     padding: 40px;
-    border: var(--negro);
-    border-radius: 2px;
-    margin: 2px;
+    border: 2px solid rgba(0, 0, 0, 0.06);    
+    border-radius: 10px;
+    box-shadow: 0 18px 40px #222222;
+    margin: 20px;
     background-color: var(--fondo);
-}
-section{
-    display: flex;
-    flex-direction: row;
+    text-align: center;
     
 }
+section{
+    width: 100%;
+    display: grid;
+    place-items: center;
+    padding: 40px 16px;
+    
+}
+#pokemon-img{
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  background: #fff;
+  border-radius: 50%;
+   border: 5px solid #3f4be0; /* borde como la referencia */
+  padding: 14px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  display: block;
+  margin: 0 auto 14px;
+}
+
+#pokemon-name{
+  margin: 6px 0 4px;
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--negro);
+}
+
+#pokemon-id{
+  margin: 0 0 12px;
+  color: rgba(0,0,0,0.55);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  z-index: 999;
+}
+
+
+.modal-content {
+  width: min(520px, 92vw);
+  background: var(--white);
+  border-radius: 18px;
+  padding: 22px 20px 18px;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.35);
+  position: relative;
+  text-align: center;
+}
+#close-modal {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  font-size: 28px;
+  cursor: pointer;
+  user-select: none;
+  color: rgba(0,0,0,0.6);
+}
+#modal-img {
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+  display: block;
+  margin: 10px auto 8px;
+}
+#modal-name {
+  margin: 8px 0 0;
+  font-size: 26px;
+  font-weight: 900;
+}
+.modal-info {
+  display: grid;
+  gap: 8px;
+  text-align: center;
+  margin: 10px 0 14px;
+  padding: 9px;
+  border-radius: 12px;
+  background: rgba(0,0,0,0.03);
+}
+.modal-stats {
+  text-align: left;
+  padding: 12px;    
+  border-radius: 12px;
+  background: rgba(0,0,0,0.03);
+}
+.modal-stats h3 {
+  margin: 0 0 10px;
+}
+.modal-stats p {
+  margin: 6px 0;
+}
+
+.hidden {
+  display: none;
+}
+
+
