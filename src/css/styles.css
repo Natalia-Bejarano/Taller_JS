@@ -1,12 +1,17 @@
 :root {
  --white : #FFFFFF;
- --fondo : #8d8d8d;
+ --fondo : #a1d1ef;
  --negro : #000000;
  --accent-color: #617665;
  --card-size : 170px, 140px;
- --background : #2d3cff;
+ --background : #2a8ebf;
+ --cardBack : #4bb0d1;
+ --buttonBack : #215e7e;
+ --closeB : #ff0000;
+ --previousB : #8d1111;
 
 }
+
 body {
     
     min-height: 100vh;
@@ -17,7 +22,6 @@ body {
     margin: 0;
 }
 
-
 button{
     padding: 0px;
     border: 0px;
@@ -25,24 +29,199 @@ button{
 
 }
 /*tipos de pokemon y sus colores*/
-.type.normal { background: #bdbdbd; color: #000; }
-.type.electric { background: #f7d02c; color: #000; }
-.type.fire { background: #ee8130; }
-.type.ground { background: #833900; }
-.type.rock { background: #e9d45f; color: #000; }
-.type.water { background: #6390f0; }
-.type.grass { background: #7ac74c; }
-.type.bug { background: #729f3f; }
-.type.flying { background: #3dc7ef; }
-.type.ice { background: #9be9ff; color: #000; }
-.type.poison { background: #9e0a72; }
-.type.fairy { background: #ff87db; }
-.type.fighting { background: #d33333; }
-.type.psychic { background: #aa0080; }
-.type.steel { background: #616161; }
-.type.ghost { background: #313d70; }
-.type.dark { background: #222222; }
-.type.dragon { background: #3f23bb; }
+.type.normal { 
+  background: #bdbdbd; 
+  color: #000; padding: 6px 10px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: inline-block;
+  text-decoration: none; 
+}
+
+.type.electric { 
+  background: #f7d02c; 
+  color: #000; 
+  padding: 6px 10px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: inline-block;
+  text-decoration: none; }
+
+.type.fire { background: #ee8130; 
+  padding: 6px 10px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.type.ground { background: #833900; 
+  color: var(--white);
+  padding: 6px 10px;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.type.rock { 
+  background: #e9d45f; 
+  color: #000; 
+  padding: 6px 10px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: inline-block;
+  text-decoration: none;
+}
+.type.water { 
+  background: #6390f0; 
+  padding: 6px 10px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: inline-block;
+  text-decoration: none;
+}
+.type.grass { background: #7ac74c;
+  padding: 6px 10px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: inline-block;
+  text-decoration: none;
+}
+.type.bug { background: #729f3f; 
+  padding: 6px 10px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: inline-block;
+  text-decoration: none;
+}
+.type.flying { background: #3dc7ef; 
+  padding: 6px 10px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: inline-block;
+  text-decoration: none;
+}
+.type.ice { background: #9be9ff; color: #000; 
+  padding: 6px 10px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: inline-block;
+  text-decoration: none;}
+.type.poison { 
+  background: #9e0a72; 
+  padding: 6px 10px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: inline-block;
+  text-decoration: none;
+  color: var(--white);
+ }
+.type.fairy { background: #ff87db;
+  padding: 6px 10px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: inline-block;
+  text-decoration: none; }
+.type.fighting { background: #d33333;
+  padding: 6px 10px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: inline-block;
+  text-decoration: none; }
+.type.psychic { background: #aa0080; 
+  padding: 6px 10px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: inline-block;
+  text-decoration: none;}
+
+.type.steel { background: #616161; 
+  padding: 6px 10px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: inline-block;
+  text-decoration: none;
+  color: var(--white);
+}
+.type.ghost { background: #313d70; 
+  padding: 6px 10px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: inline-block;
+  text-decoration: none;
+  color: var(--white);
+}
+.type.dark { background: #222222; 
+  padding: 6px 10px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: inline-block;
+  text-decoration: none;
+  color: var(--white);
+}
+.type.dragon { background: #3f23bb; 
+  padding: 6px 10px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: inline-block;
+  text-decoration: none;
+  color: var(--white);
+}
 
 .types{
   display: flex;
@@ -50,44 +229,76 @@ button{
   gap: 10px;
   flex-wrap: wrap;
   margin: 8px 0 18px;
+  padding-top: 20px;
+  border-top: 2px solid rgba(0,0,0,0.2);
 }
 
-.btcN{
-    background: #215e7e;
-    color: var(--white);
-    font-weight: 700;
-    border-radius: 10px;
-    padding: 12px 18px;
-    min-width: 140px;
-    transition: transform 0.08s ease, filter 0.15s ease;
-}
-.btcN:hover, .btcP:hover {
-    filter: brightness(1.07);
+.btcN,
+.btcP {
+  background: var(--buttonBack);
+  color: var(--white);
+  font-weight: 700;
+  border-radius: 70px;
+  padding: 12px 20px;
+  min-width: 140px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border: none;
+  cursor: pointer;
+  margin-top: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.12s ease, box-shadow 0.12s ease, filter 0.12s ease;
 }
 
-.btcP:active, .btcN:active{
-    transform: scale(0.98);
+.btcN:hover,
+.btcP:hover {
+  filter: brightness(1.06);
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.5);
+}
+.btcN:hover {
+  background: var(--previousB);
 }
 
-.btcP{
-     padding: 12px 18px;
-    background: #1d7a9a;
-    color: var(--white);
-    font-weight: 700;
-    border-radius: 10px;
-    min-width: 140px;
-    transition: transform 0.08s ease, filter 0.15s ease;
+.btcN:active,
+.btcP:active {
+  transform: scale(0.98);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.25);
 }
 
 .card{
     padding: 40px;
-    border: 2px solid rgba(0, 0, 0, 0.06);    
-    border-radius: 10px;
-    box-shadow: 0 18px 40px #222222;
     margin: 20px;
-    background-color: var(--fondo);
     text-align: center;
-    
+    background-color: var(--fondo);
+    border-radius: 18px;
+    border: 3px solid rgba(0, 0, 0, 0.25);
+    box-shadow: inset 0 4px 0 rgba(255,255,255,0.35), inset 0 -6px 0 rgba(0,0,0,0.25),
+    0 16px 0 rgba(0,0,0,0.35),
+    0 26px 40px rgba(0,0,0,0.6); /*bno, inset es pa definir las propiedades del posicionamiento del elemento, en este caso nuestra carta de pokémon */
+    position: relative;
+}
+
+.card::before{
+    content: ""; /*básicamente ayuda a que los pseudoelementos existan ::*/
+    position: absolute;
+    inset: 14px;
+    border-radius: 12px;
+    border: 2px solid rgba(0,0,0,0.15);
+    pointer-events: none;
+}
+
+.card::after{ /*Pseudoelemento, ¿Pa que? para darle diseño a partes específicas xd*/
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 4px;
+    border-radius: 10px;
+    background: rgba(0,0,0,0.25);
+    pointer-events: none; /*controlar la la respuesta de los elementos con respecto a las interacciones del puntero - por eso pointer events*/
 }
 section{
     width: 100%;
@@ -99,14 +310,20 @@ section{
 #pokemon-img{
   width: 150px;
   height: 150px;
-  object-fit: contain;
-  background: #fff;
+  background: var(--fondo);
   border-radius: 50%;
-   border: 5px solid #3f4be0; /* borde como la referencia */
   padding: 14px;
   box-shadow: 0 10px 20px rgba(0,0,0,0.15);
   display: block;
   margin: 0 auto 14px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#pokemon-img:hover{
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 18px 30px rgba(23, 100, 112, 0.5);
+  background: var(--cardBack) ;
 }
 
 #pokemon-name{
@@ -114,79 +331,141 @@ section{
   font-size: 32px;
   font-weight: 800;
   color: var(--negro);
+  text-shadow: 0 2px 0 rgba(255,255,255,0.4);
+
 }
 
 #pokemon-id{
-  margin: 0 0 12px;
+  margin: 0 0 14px;
   color: rgba(0,0,0,0.55);
   font-weight: 700;
   letter-spacing: 0.5px;
+  font-size: 0.85rem;
+  opacity: 0.75;
 }
+
+/*aca empieza todo dentro de la seccion del pokémon*/
+
 .modal {
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.55);
   display: grid;
   place-items: center;
-  padding: 20px;
+  padding: 16px;
   z-index: 999;
 }
 
-
 .modal-content {
-  width: min(520px, 92vw);
+  width: min(520px, 95vw); 
+  max-height: 90vh; 
+  overflow-y: auto; 
   background: var(--white);
-  border-radius: 18px;
-  padding: 22px 20px 18px;
+  border-radius: 20px;
+  padding: 20px 18px;
   box-shadow: 0 18px 40px rgba(0,0,0,0.35);
   position: relative;
   text-align: center;
 }
+
+#modal-img {
+  width: 160px;
+  height: 160px;
+  display: block;
+  margin: 8px auto 10px;
+  background: var(--white);
+  border-radius: 24px;
+  box-shadow: inset 0 4px 6px rgba(0,0,0,0.15);
+  transition: transform 0.2s ease;
+}
+
+#modal-img:hover {
+  transform: translateY(-2px) scale(1.05);
+}
+
+#modal-name {
+  margin: 6px 0 10px;
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.modal-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /*display en grid - casillas*/
+  gap: 8px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 14px;
+  background: rgb(232, 241, 248);
+  box-shadow: inset 0 2px 0 rgba(255,255,255,0.6);
+}
+
+.modal-stats {
+  padding: 12px;
+  border-radius: 14px;
+  background: rgb(232, 241, 248);
+}
+
+.modal-stats h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+}
+
+.modal-stats p {
+  margin: 4px 0;
+  font-size: 14px;
+}
+
+@media (max-height: 650px) {
+  #modal-img {
+    width: 130px;
+    height: 130px;
+  }
+
+  #modal-name {
+    font-size: 22px;
+  }
+}
+
 #close-modal {
   position: absolute;
   top: 10px;
   right: 14px;
-  font-size: 28px;
+  font-size: 34px;
   cursor: pointer;
   user-select: none;
   color: rgba(0,0,0,0.6);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
 }
-#modal-img {
-  width: 180px;
-  height: 180px;
-  object-fit: contain;
-  display: block;
-  margin: 10px auto 8px;
-}
-#modal-name {
-  margin: 8px 0 0;
-  font-size: 26px;
-  font-weight: 900;
-}
-.modal-info {
-  display: grid;
-  gap: 8px;
-  text-align: center;
-  margin: 10px 0 14px;
-  padding: 9px;
-  border-radius: 12px;
-  background: rgba(0,0,0,0.03);
-}
-.modal-stats {
-  text-align: left;
-  padding: 12px;    
-  border-radius: 12px;
-  background: rgba(0,0,0,0.03);
-}
-.modal-stats h3 {
-  margin: 0 0 10px;
-}
-.modal-stats p {
-  margin: 6px 0;
+#close-modal:hover {
+  color: var(--closeB);
+  transform: translateY(-4px) scale(1.08);
 }
 
 .hidden {
   display: none;
 }
+
+
+/*Acá hay styles para la carta, se pensó tipo consola*/
+
+.card{
+  overflow: hidden; /*todo dentro de esta pantalla*/
+}
+
+.card::before{
+  background: linear-gradient(
+    to bottom,
+    rgba(255,255,255,0.25) 0%,
+    rgba(255,255,255,0.18) 45%,   /*.card y .card::before son para dividir la pantalla */
+    rgba(0,0,0,0.12) 46%,         /*y dar la sensacion de arriba pantalla y abajo botones*/
+    rgba(0,0,0,0.18) 100%        /*se le agregan los colores, se maneja con degradado (%)*/
+  );
+}
+
+
+
+
 
 
