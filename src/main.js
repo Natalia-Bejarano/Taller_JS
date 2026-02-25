@@ -11,13 +11,13 @@ async function loadPokemon(id) {
 //Inicial
 loadPokemon(current);
 
-//Navegación
-document.querySelector(".next").addEventListener("click", () => {
+//Navegación, aqui estaba el error, estabamos llamando una clase y era un id entonces se cambia por #
+document.querySelector("#next").addEventListener("click", () => {
     current++;
     loadPokemon(current);
 });
 
-document.querySelector(".prev").addEventListener("click", () => {
+document.querySelector("#prev").addEventListener("click", () => {
     if (current > 1) current--;
     loadPokemon(current);
 })
