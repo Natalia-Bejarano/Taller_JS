@@ -5,25 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="icon" href="./recursos/pokemon-removebg-preview.png" type="image">
     <title>Pokemon</title>
-    <link rel="stylesheet" href="/src/css/styles.css">
+    <link rel="stylesheet" href="./src/css/styles.css">
 </head>
 <body>
     <section> 
         <div class="card">
-            <img alt="pokemon" id="pokemon-img" class="pokemon-img">
             <h1 id="pokemon-name"></h1>
-            <p id="pokemon-id"></p>
+            <img alt="pokemon" id="pokemon-img" class="pokemon-img">  
             <div class="types">
                 <!--
                 aqui va js
                 <P>Etiquetas</P>
                 -->
             </div>
-            <div class="buttons">
-                <button id="prev" class="btcN">Anterior</button>
-                <button id="next" class="btcP">Siguiente</button>
-            </div>
             
+            <p id="pokemon-id"></p>
+        </div>
+        <div class="buttons">
+                <button id="prev" class="btcN"><img src="./recursos/585e47b5cb11b227491c338b.png" alt="anterior" class="flecha"></button>
+                <button id="next" class="btcN"><img src="./recursos/585e47b5cb11b227491c338b.png" alt="siguiente" class="flecha"></button>
         </div>
         <div id="pokemon-modal" class="modal hidden">
         <div class="modal-content">

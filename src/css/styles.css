@@ -28,6 +28,9 @@ button{
     cursor: pointer;
 
 }
+.icon{
+  object-fit: contain;
+}
 /*tipos de pokemon y sus colores*/
 .type.normal { 
   background: #bdbdbd; 
@@ -237,7 +240,7 @@ button{
 .btcP {
   background: var(--buttonBack);
   color: var(--white);
-  font-weight: 700;
+  font-weight: bold;
   border-radius: 70px;
   padding: 12px 20px;
   min-width: 140px;
@@ -245,9 +248,15 @@ button{
   letter-spacing: 0.04em;
   border: none;
   cursor: pointer;
+  object-fit: contain;
   margin-top: 8px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
   transition: transform 0.12s ease, box-shadow 0.12s ease, filter 0.12s ease;
+}
+.flecha{
+  width: 10px;
+  height: 10px;
+  color: var(--white);
 }
 
 .btcN:hover,
@@ -267,7 +276,7 @@ button{
 }
 
 .card{
-    padding: 40px;
+    padding: 0px 30px 80px;
     margin: 20px;
     text-align: center;
     background-color: var(--fondo);
@@ -298,7 +307,7 @@ button{
     height: 4px;
     border-radius: 10px;
     background: rgba(0,0,0,0.25);
-    pointer-events: none; /*controlar la la respuesta de los elementos con respecto a las interacciones del puntero - por eso pointer events*/
+    pointer-events: snone; /*controlar la la respuesta de los elementos con respecto a las interacciones del puntero - por eso pointer events*/
 }
 section{
     width: 100%;
@@ -308,16 +317,16 @@ section{
     
 }
 #pokemon-img{
-  width: 150px;
+  width: 300px;
   height: 150px;
-  background: var(--fondo);
-  border-radius: 50%;
-  padding: 14px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-  display: block;
-  margin: 0 auto 14px;
+  padding: 8px;
+  border: 2px solid var(--white);
+  box-shadow: 0 10px 10px rgba(0,0,0,0.15);
+  margin: 0 0 14px;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.8s ease, box-shadow 0.8s ease;
+  object-fit: contain;
+  opacity: 1;
 }
 
 #pokemon-img:hover{
@@ -327,9 +336,11 @@ section{
 }
 
 #pokemon-name{
-  margin: 6px 0 4px;
-  font-size: 32px;
-  font-weight: 800;
+  text-align: left;
+  padding: 30px 0 2px 20px;
+  margin: 0 0 8px;
+  font-size: 28px;
+  font-weight: 600;
   color: var(--negro);
   text-shadow: 0 2px 0 rgba(255,255,255,0.4);
 
