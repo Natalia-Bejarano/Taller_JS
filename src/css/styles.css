@@ -276,9 +276,8 @@ button{
 }
 
 .card{
-    padding: 0px 30px 80px;
+    padding: 0px 30px 0;
     margin: 20px;
-    text-align: center;
     background-color: var(--fondo);
     border-radius: 18px;
     border: 3px solid rgba(0, 0, 0, 0.25);
@@ -348,6 +347,8 @@ section{
 
 #pokemon-id{
   margin: 0 0 14px;
+  align-content: left;
+  padding: 120px 0 6px 0;
   color: rgba(0,0,0,0.55);
   font-weight: 700;
   letter-spacing: 0.5px;
