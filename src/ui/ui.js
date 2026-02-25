@@ -1,6 +1,5 @@
 let modalBound = false;
 
-
 const typeColors = {
   fire: "#e74c3c",
   water: "#3498db",
@@ -15,8 +14,6 @@ const typeColors = {
 };
 export function showPokemon(pokemon){
     if (!pokemon) return;
-
-    
 
     //se cambia la imagen porque esta no sirve y da error
     document.querySelector(".pokemon-img").onclick = () => showModal(pokemon);
@@ -93,16 +90,36 @@ function showModal(pokemon) {
 
   document.getElementById("modal-abilities").textContent =
     pokemon.abilities.map(capitalize).join(", ");
+    const modalContent = document.querySelector(".modal-content");
 
-  // aqui si van las stats
+  const mainType = pokemon.types[0];
+  const color = typeColors[mainType] || "#ffffff";
+
+  if (modalContent) {
+    modalContent.style.setProperty("--modal-bg", color);
+  }
+
+  // aqui las stats
+
   const statsDiv = document.getElementById("modal-stats");
   statsDiv.innerHTML = "<h3>Estadísticas</h3>";
 
   pokemon.stats.forEach(s => {
-    const p = document.createElement("p");
-    p.innerHTML = `<strong>${formatStatName(s.stat)}:</strong> ${s.base}`;
-    statsDiv.appendChild(p);
-  });
+  const statRow = document.createElement("div");
+  statRow.classList.add("stat-row");
+  
+  const percent = Math.min((s.base / 150) * 100, 100);
+
+  statRow.innerHTML = `
+    <span class="stat-name">${formatStatName(s.stat)}</span>
+    <div class="stat-bar">
+      <div class="stat-fill"></div>
+    </div>
+    <span class="stat-value">${s.base}</span>
+  `;
+    statRow.querySelector(".stat-fill").style.setProperty("--stat-percent", percent);
+    statsDiv.appendChild(statRow);
+});
 
   // aqui se deberia mostrar el modal, edit ya funciono
   modal.classList.remove("hidden");
@@ -122,7 +139,7 @@ function bindModalEventsOnce() {
 
   if (closeBtn) closeBtn.addEventListener("click", closeModal);
 
-  // Cerrar si hace clic afuera como otro modo de cerrar con el escape
+  // Cerrar si hace clic afuera 
   if (modal) {
     modal.addEventListener("click", (e) => {
       if (e.target === modal) closeModal();
@@ -140,7 +157,5 @@ function capitalize(word) {
 }
 function formatStatName(stat) {
   return stat
-    .split("-")
-    .map(capitalize)
-    .join(" ");
+    .split("-").map(capitalize).join(" ");
 }

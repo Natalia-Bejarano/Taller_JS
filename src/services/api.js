@@ -18,7 +18,7 @@ try {
     //extraer las habilidades 
     const abilities = data.abilities.map(a => a.ability.name);
     
-    //Extraer los tipos
+    //extraer los tipos
     const types = data.types.map(t => t.type.name);
     //extraer estadísticas
     const stats = data.stats.map(s => ({
@@ -38,7 +38,7 @@ try {
         sprite,
         data.height,
         data.weight, 
-        abilities,  // error encontrado, se estaba llamando en desorden los parametros
+        abilities,
         stats,
         isLegendary,
         isMythical

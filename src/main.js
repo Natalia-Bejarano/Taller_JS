@@ -8,10 +8,8 @@ async function loadPokemon(id) {
     showPokemon(pokemon);
 }
 
-//Inicial
 loadPokemon(current);
 
-//Navegación, aqui estaba el error, estabamos llamando una clase y era un id entonces se cambia por #
 document.querySelector("#next").addEventListener("click", () => {
     current++;
     loadPokemon(current);
@@ -31,7 +29,7 @@ searchBtn.addEventListener("click", async () => {
   const pokemon = await fetchPokemon(id);
   if (pokemon) {
     showPokemon(pokemon);
-    currentId = pokemon.id; // importante si usas next/prev
+    currentId = pokemon.id;
   }
 });
 input.addEventListener("keydown", async (e) => {

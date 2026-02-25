@@ -1,5 +1,5 @@
 export default class Pokemon {
-    //esto tambien estaba desorganizado
+  
 constructor(id, name, types, sprite, height, weight, abilities, stats, isLegendary, isMythical) {
     this.id = id;
     this.name = name;
