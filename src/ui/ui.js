@@ -1,7 +1,22 @@
 let modalBound = false;
+
+
+const typeColors = {
+  fire: "#e74c3c",
+  water: "#3498db",
+  grass: "#2ecc71",
+  electric: "#f1c40f",
+  poison: "#9b59b6",
+  ground: "#d35400",
+  flying: "#81ecec",
+  psychic: "#fd79a8",
+  dark: "#2d3436",
+  fairy: "#f8a5c2",
+};
 export function showPokemon(pokemon){
     if (!pokemon) return;
 
+    
 
     //se cambia la imagen porque esta no sirve y da error
     document.querySelector(".pokemon-img").onclick = () => showModal(pokemon);
@@ -16,12 +31,35 @@ export function showPokemon(pokemon){
     //Tipos
     const typesDiv = document.querySelector(".types");
     typesDiv.innerHTML = "";
-    pokemon.types.forEach(t=> {
-        const span = document.createElement("span");
-        span.classList.add("type", t);
-        span.textContent = capitalize(t);
-        typesDiv.appendChild(span);
-    });
+
+  pokemon.types.forEach(t => {
+  const img = document.createElement("img");
+
+  img.src = `recursos/${t}.png`;
+  img.alt = t;
+  img.classList.add("type-icon");
+
+  typesDiv.appendChild(img);
+
+  
+});
+
+const abilitiesDiv = document.querySelector(".pokemon-abilities");
+abilitiesDiv.innerHTML = "";
+
+pokemon.abilities.slice(0, 2).forEach(ability => {
+  const span = document.createElement("span");
+  span.classList.add("ability");
+  span.textContent = capitalize(ability);
+  abilitiesDiv.appendChild(span);
+});
+const card = document.querySelector(".card");
+
+
+const mainType = pokemon.types[0]; 
+const color = typeColors[mainType] || "#999";
+card.style.backgroundColor = color;
+
     //estadísticas
     bindModalEventsOnce();
     //las stasst se cargan en el modal no en la fucking card
@@ -40,6 +78,8 @@ function showModal(pokemon) {
   const heightM = (pokemon.height / 10).toFixed(1);
   const weightKg = (pokemon.weight / 10).toFixed(1);
 
+
+
   document.getElementById("modal-height").textContent = heightM;
   document.getElementById("modal-weight").textContent = weightKg;
 
@@ -56,7 +96,7 @@ function showModal(pokemon) {
     statsDiv.appendChild(p);
   });
 
-  // aqui se deberia mostrar el modal pero no funciona xd, edit ya funciono
+  // aqui se deberia mostrar el modal, edit ya funciono
   modal.classList.remove("hidden");
 }
 function closeModal() {

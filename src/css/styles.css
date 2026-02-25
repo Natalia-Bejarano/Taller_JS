@@ -32,208 +32,15 @@ button{
   object-fit: contain;
 }
 /*tipos de pokemon y sus colores*/
-.type.normal { 
-  background: #bdbdbd; 
-  color: #000; padding: 6px 10px;
-  border-radius: 12px;
-  font-size: 0.85rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  display: inline-block;
-  text-decoration: none; 
-}
 
-.type.electric { 
-  background: #f7d02c; 
-  color: #000; 
-  padding: 6px 10px;
-  border-radius: 12px;
-  font-size: 0.85rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  display: inline-block;
-  text-decoration: none; }
-
-.type.fire { background: #ee8130; 
-  padding: 6px 10px;
-  border-radius: 12px;
-  font-size: 0.85rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  display: inline-block;
-  text-decoration: none;
-}
-
-.type.ground { background: #833900; 
-  color: var(--white);
-  padding: 6px 10px;
-  border-radius: 10px;
-  font-size: 0.85rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  display: inline-block;
-  text-decoration: none;
-}
-
-.type.rock { 
-  background: #e9d45f; 
-  color: #000; 
-  padding: 6px 10px;
-  border-radius: 12px;
-  font-size: 0.85rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  display: inline-block;
-  text-decoration: none;
-}
-.type.water { 
-  background: #6390f0; 
-  padding: 6px 10px;
-  border-radius: 12px;
-  font-size: 0.85rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  display: inline-block;
-  text-decoration: none;
-}
-.type.grass { background: #7ac74c;
-  padding: 6px 10px;
-  border-radius: 12px;
-  font-size: 0.85rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  display: inline-block;
-  text-decoration: none;
-}
-.type.bug { background: #729f3f; 
-  padding: 6px 10px;
-  border-radius: 12px;
-  font-size: 0.85rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  display: inline-block;
-  text-decoration: none;
-}
-.type.flying { background: #3dc7ef; 
-  padding: 6px 10px;
-  border-radius: 12px;
-  font-size: 0.85rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  display: inline-block;
-  text-decoration: none;
-}
-.type.ice { background: #9be9ff; color: #000; 
-  padding: 6px 10px;
-  border-radius: 12px;
-  font-size: 0.85rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  display: inline-block;
-  text-decoration: none;}
-.type.poison { 
-  background: #9e0a72; 
-  padding: 6px 10px;
-  border-radius: 12px;
-  font-size: 0.85rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  display: inline-block;
-  text-decoration: none;
-  color: var(--white);
- }
-.type.fairy { background: #ff87db;
-  padding: 6px 10px;
-  border-radius: 12px;
-  font-size: 0.85rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  display: inline-block;
-  text-decoration: none; }
-.type.fighting { background: #d33333;
-  padding: 6px 10px;
-  border-radius: 12px;
-  font-size: 0.85rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  display: inline-block;
-  text-decoration: none; }
-.type.psychic { background: #aa0080; 
-  padding: 6px 10px;
-  border-radius: 12px;
-  font-size: 0.85rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  display: inline-block;
-  text-decoration: none;}
-
-.type.steel { background: #616161; 
-  padding: 6px 10px;
-  border-radius: 12px;
-  font-size: 0.85rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  display: inline-block;
-  text-decoration: none;
-  color: var(--white);
-}
-.type.ghost { background: #313d70; 
-  padding: 6px 10px;
-  border-radius: 12px;
-  font-size: 0.85rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  display: inline-block;
-  text-decoration: none;
-  color: var(--white);
-}
-.type.dark { background: #222222; 
-  padding: 6px 10px;
-  border-radius: 12px;
-  font-size: 0.85rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  display: inline-block;
-  text-decoration: none;
-  color: var(--white);
-}
-.type.dragon { background: #3f23bb; 
-  padding: 6px 10px;
-  border-radius: 12px;
-  font-size: 0.85rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  display: inline-block;
-  text-decoration: none;
-  color: var(--white);
-}
 
 .types{
   display: flex;
-  justify-content: center;
+  justify-content: right;
   gap: 10px;
   flex-wrap: wrap;
   margin: 8px 0 18px;
   padding-top: 20px;
-  border-top: 2px solid rgba(0,0,0,0.2);
 }
 
 .btcN,
@@ -278,13 +85,13 @@ button{
 .card{
     padding: 0px 30px 0;
     margin: 20px;
-    background-color: var(--fondo);
     border-radius: 18px;
     border: 3px solid rgba(0, 0, 0, 0.25);
     box-shadow: inset 0 4px 0 rgba(255,255,255,0.35), inset 0 -6px 0 rgba(0,0,0,0.25),
     0 16px 0 rgba(0,0,0,0.35),
     0 26px 40px rgba(0,0,0,0.6); /*bno, inset es pa definir las propiedades del posicionamiento del elemento, en este caso nuestra carta de pokémon */
     position: relative;
+     
 }
 
 .card::before{
@@ -323,15 +130,17 @@ section{
   box-shadow: 0 10px 10px rgba(0,0,0,0.15);
   margin: 0 0 14px;
   cursor: pointer;
-  transition: transform 0.8s ease, box-shadow 0.8s ease;
+  transition: transform 0.8s ease, box-shadow 0.8s ease, background-color 0.6s ease;
   object-fit: contain;
   opacity: 1;
+  background: var(--cardBack);
+  
 }
 
 #pokemon-img:hover{
   transform: translateY(-8px) scale(1.03);
   box-shadow: 0 18px 30px rgba(23, 100, 112, 0.5);
-  background: var(--cardBack) ;
+  background: var(--cardBack);
 }
 
 #pokemon-name{
@@ -457,6 +266,23 @@ section{
 
 .hidden {
   display: none;
+}
+.container-top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+}
+.type-icon{
+  width: 30px;
+  height: 30px;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4));
+}
+.pokemon-abilities {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 40px 0 0 10px;
+  gap: 30px;              /*  separación entre habilidades para que haya hueco */
 }
 
 
