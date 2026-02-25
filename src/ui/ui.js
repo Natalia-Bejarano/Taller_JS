@@ -35,7 +35,7 @@ export function showPokemon(pokemon){
   pokemon.types.forEach(t => {
   const img = document.createElement("img");
 
-  img.src = `recursos/${t}.png`;
+  img.src = `/recursos/types/${t}.png`;
   img.alt = t;
   img.classList.add("type-icon");
 
@@ -55,11 +55,19 @@ pokemon.abilities.slice(0, 2).forEach(ability => {
 });
 const card = document.querySelector(".card");
 
-
-const mainType = pokemon.types[0]; 
+const mainType = pokemon.types[0];
 const color = typeColors[mainType] || "#999";
+
 card.style.backgroundColor = color;
 
+const img = document.getElementById("pokemon-img");
+img.style.background = `url(/recursos/fondos/${mainType}.png) center/cover no-repeat`;
+
+
+card.classList.remove("legendary", "mythical");
+
+if (pokemon.isLegendary) card.classList.add("legendary");
+if (pokemon.isMythical) card.classList.add("mythical");
     //estadísticas
     bindModalEventsOnce();
     //las stasst se cargan en el modal no en la fucking card

@@ -7,6 +7,13 @@ try {
     const res = await fetch(API_URL + id);
     if (!res.ok) throw new Error("No se encontró el Pokémon");
     const data = await res.json();
+    //legendariossss
+    const speciesRes = await fetch(data.species.url);
+    if (!speciesRes.ok) throw new Error("No se pudo cargar species");
+    const speciesData = await speciesRes.json();
+
+    const isLegendary = speciesData.is_legendary;
+    const isMythical = speciesData.is_mythical;
 
     //extraer las habilidades 
     const abilities = data.abilities.map(a => a.ability.name);
@@ -32,7 +39,9 @@ try {
         data.height,
         data.weight, 
         abilities,  // error encontrado, se estaba llamando en desorden los parametros
-        stats    
+        stats,
+        isLegendary,
+        isMythical
         );
     
         } catch (error) {

@@ -21,3 +21,35 @@ document.querySelector("#prev").addEventListener("click", () => {
     if (current > 1) current--;
     loadPokemon(current);
 })
+const input = document.getElementById("pokemon-input");
+const searchBtn = document.getElementById("search-btn");
+
+searchBtn.addEventListener("click", async () => {
+  const id = input.value.trim();
+  if (!id) return;
+
+  const pokemon = await fetchPokemon(id);
+  if (pokemon) {
+    showPokemon(pokemon);
+    currentId = pokemon.id; // importante si usas next/prev
+  }
+});
+input.addEventListener("keydown", async (e) => {
+  if (e.key === "Enter") {
+    searchBtn.click();
+  }
+});
+searchBtn.addEventListener("click", async () => {
+  const id = parseInt(input.value);
+
+  if (isNaN(id) || id < 1 || id > 1025) {
+    alert("Número inválido");
+    return;
+  }
+
+  const pokemon = await fetchPokemon(id);
+  if (pokemon) {
+    showPokemon(pokemon);
+    currentId = pokemon.id;
+  }
+});
