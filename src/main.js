@@ -21,7 +21,7 @@ document.querySelector("#prev").addEventListener("click", () => {
 })
 
 
-//buscar pokemon
+//este es pa buscar al pokemon
 const input = document.getElementById("pokemon-input");
 const searchBtn = document.getElementById("search-btn");
 
@@ -42,7 +42,8 @@ input.addEventListener("keydown", async (e) => {
 });
 searchBtn.addEventListener("click", async () => {
   const id = parseInt(input.value);
-//validacion
+
+//validacion para q no le de bug xd
   if (isNaN(id) || id < 1 || id > 1025) {
     alert("Número inválido");
     return;
@@ -54,7 +55,7 @@ searchBtn.addEventListener("click", async () => {
     currentId = pokemon.id;
   }
 });
-//musica
+//musiquita
 const music = document.getElementById("bg-music");
 const toggleBtn = document.getElementById("music-toggle");
 

@@ -10,6 +10,6 @@ constructor(id, name, types, sprite, height, weight, abilities, stats, isLegenda
     this.height = height;
     this.weight = weight;
     this.isLegendary = isLegendary;
-    this.isMythical = isMythical;//aqui se desorganizo y estuvimos dos horas buscando que era el problema jaja
+    this.isMythical = isMythical;//aqui se desorganizo y estuvimos dos horas buscando que era el problema jaja *inserte carita triste*
   }
 }

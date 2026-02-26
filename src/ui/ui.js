@@ -25,7 +25,7 @@ export function showPokemon(pokemon){
     document.getElementById("pokemon-name").textContent = capitalize(pokemon.name);
     document.getElementById("pokemon-id").textContent = "#" + pokemon.id.toString().padStart(3, "0");
 
-    //Tipos
+    //Tipos de pokemon
     const typesDiv = document.querySelector(".types");
     typesDiv.innerHTML = "";
 
@@ -82,8 +82,6 @@ function showModal(pokemon) {
 
   const heightM = (pokemon.height / 10).toFixed(1);
   const weightKg = (pokemon.weight / 10).toFixed(1);
-
-
 
   document.getElementById("modal-height").textContent = heightM;
   document.getElementById("modal-weight").textContent = weightKg;
