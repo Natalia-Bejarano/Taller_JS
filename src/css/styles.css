@@ -1,14 +1,18 @@
 :root {
- --white : #FFFFFF;
- --fondo : #a1d1ef;
- --negro : #000000;
- --accent-color: #617665;
- --card-size : 170px, 140px;
- --background : #2a8ebf;
- --cardBack : #4bb0d1;
- --buttons : #f7de00;
- --closeB : #ff0000;
- --previousB : #8d1111;
+  --white : #FFFFFF;
+  --fondo : #a1d1ef;
+  --negro : #000000;
+  --accent-color: #617665;
+  --card-size : 170px, 140px;
+  --background : #2a8ebf;
+  --cardBack : #4bb0d1;
+  --buttons : #f7de00;
+  --closeB : #ff0000;
+  --previousB : #8d1111;
+  --btn-radius: 999px;
+  --btn-shadow: 0 10px 18px rgba(0,0,0,.28);
+  --btn-shadow-hover: 0 14px 26px rgba(0,0,0,.35);
+  --btn-border: rgba(0,0,0,.14);
 
 }
 * {
@@ -20,10 +24,18 @@ body {
     min-height: 100vh;
     display: grid;
     place-items: center;
-    background: var(--background);
     font-family: sans-serif;
     margin: 0;
+  /*opacidad*/
+    background:
+    linear-gradient(rgba(0,0,0,0.80), rgba(0,0,0,0.50)),
+    url("../../recursos/fondo\ pagina\ web.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
+
 
 button{
     padding: 0px;
@@ -33,6 +45,23 @@ button{
 }
 .icon{
   object-fit: contain;
+}
+/*musica*/
+#music-toggle{
+  margin: 15px;
+  margin-left: 140px;
+  background: #ffffff;
+  border: 2px solid #000;
+  border-radius: 8px;
+  padding: 12px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all .2s ease;
+}
+
+#music-toggle:hover{
+  background: #f2f2f2;
+  transform: translateY(-3px);
 }
 /*tipos de pokemon y sus colores*/
 
@@ -45,48 +74,64 @@ button{
   padding-top: 20px;
 }
 
-.btcN,
-.btcP {
-  background: var(--buttons);
-  color: var(--white);
-  font-weight: bold;
-  border-radius: 70px;
-  padding: 12px 20px;
-  min-width: 140px;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  border: none;
-  cursor: pointer;
-  object-fit: contain;
-  margin-top: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  transition: transform 0.12s ease, box-shadow 0.12s ease, filter 0.12s ease;
-}
-.flecha{
-  width: 10px;
-  height: 10px;
-}
 
-.btcN:hover,
-.btcP:hover {
-  filter: brightness(1.06);
-  transform: translateY(-4px);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.5);
-}
-.btcN:hover {
-  background: var(--fondo);
-}
-
-.btcN:active,
-.btcP:active {
-  transform: scale(0.98);
-  box-shadow: 0 3px 8px rgba(0,0,0,0.25);
-}
 .buttons {
   display: flex;
   gap: 70px; 
   justify-content: center;
   margin-top: 10px;
+}
+/* botones */
+
+.btcN,
+#search-btn{
+  background: #ffffff;
+  color: #000000;
+  border: 2px solid #000000;
+  border-radius: 8px;
+  padding: 12px 20px;
+  font-weight: 600;
+  letter-spacing: .05em;
+  box-shadow: 0 8px 18px rgba(0,0,0,.25);
+  position: relative;
+  overflow: hidden;
+  transition: all .2s ease;
+}
+
+.btcN::before,
+#search-btn::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    rgba(255,255,255,0.6) 0%,
+    rgba(255,255,255,0.2) 40%,
+    rgba(255,255,255,0) 70%
+  );
+  opacity: .6;
+  pointer-events: none;
+}
+
+/* Hover */
+.btcN:hover,
+#search-btn:hover{
+  background: #f2f2f2;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 22px rgba(0,0,0,.35);
+}
+
+/* Active */
+.btcN:active,
+#search-btn:active{
+  transform: scale(.96);
+  box-shadow: 0 6px 12px rgba(0,0,0,.25);
+}
+
+/* Flechas */
+.flecha{
+  width: 40px;
+  height: 40px;
 }
 
 .card{
@@ -138,7 +183,7 @@ section{
   box-shadow: 0 10px 10px rgba(0,0,0,0.15);
   margin: 0 0 14px;
   cursor: pointer;
-  transition: transform 0.8s ease, box-shadow 0.8s ease, background 0.6s ease;
+  transition: transform 0.8s ease, box-shadow 0.8s ease;
   object-fit: contain;
   opacity: 1;
 }
@@ -180,7 +225,6 @@ section{
   display: grid;
   place-items: center;
   padding: 16px;
-  z-index: 999;
 }
 
 .modal-content {
@@ -193,7 +237,6 @@ section{
   box-shadow: 0 18px 40px rgba(0,0,0,0.35);
   position: relative;
   text-align: center;
-  transition: background 0.6s ease;
 }
 
 #modal-img {
@@ -241,17 +284,6 @@ section{
   font-size: 14px;
   text-align: left;
  
-}
-
-@media (max-height: 650px) {
-  #modal-img {
-    width: 130px;
-    height: 130px;
-  }
-
-  #modal-name {
-    font-size: 22px;
-  }
 }
 
 #close-modal {
@@ -351,44 +383,44 @@ section{
 }
 
 /* Input número pokemon */
-#pokemon-input {
-  width: 160px;
-  padding: 10px 14px;
-  border-radius: 12px;
-  border: 2px solid rgba(0,0,0,0.2);
+#pokemon-input{
+  background: #ffffff;
+  color: #000000;
+  border: 2px solid #000000;
+  border-radius: 8px;
+  padding: 12px 18px;
+  font-weight: 600;
   font-size: 14px;
-  font-weight: bold;
+  width: 170px;
+  box-shadow: 0 8px 18px rgba(0,0,0,.25);
   outline: none;
-  background: var(--fondo);
-  transition: all 0.2s ease;
+  transition: all .2s ease;
 }
 
-/* Botón pa buscar */
-#search-btn {
-
-  padding: 10px 18px;
-  border-radius: 70px;
-  border: none;
-  background: var(--buttons);
-  color: var(--negro);
-  font-weight: bold;
-  letter-spacing: 0.05em;
-  align-items: center;
-  cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
-}
-
-#search-btn:hover {
+/* Hover */
+#pokemon-input:hover{
+  background: #f2f2f2;
   transform: translateY(-3px);
-  filter: brightness(1.1);
-  background: var(--fondo);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.4);
+  box-shadow: 0 12px 22px rgba(0,0,0,.35);
 }
 
-#search-btn:active {
-  transform: scale(0.95);
-  box-shadow: 0 3px 8px rgba(0,0,0,0.25);
+/* Cuando está activo (clickeado) */
+#pokemon-input:focus{
+  background: #ffffff;
+  box-shadow:
+    0 0 0 3px rgba(0,0,0,.15),
+    0 10px 20px rgba(0,0,0,.25);
+}
+
+/* Quitar flechitas feas del input number (opcional) */
+#pokemon-input::-webkit-outer-spin-button,
+#pokemon-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#pokemon-input[type=number] {
+  -moz-appearance: textfield;
 }
 
 /*pa q las legendarias se vean mas bonitas*/
@@ -462,4 +494,14 @@ section{
 .card.legendary:hover,
 .card.mythical:hover{
   transform: translateY(-6px) scale(1.01);
+}
+@media (max-height: 650px) {
+  #modal-img {
+    width: 130px;
+    height: 130px;
+  }
+
+  #modal-name {
+    font-size: 22px;
+  }
 }

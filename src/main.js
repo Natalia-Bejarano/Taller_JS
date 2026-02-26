@@ -19,6 +19,9 @@ document.querySelector("#prev").addEventListener("click", () => {
     if (current > 1) current--;
     loadPokemon(current);
 })
+
+
+//buscar pokemon
 const input = document.getElementById("pokemon-input");
 const searchBtn = document.getElementById("search-btn");
 
@@ -39,7 +42,7 @@ input.addEventListener("keydown", async (e) => {
 });
 searchBtn.addEventListener("click", async () => {
   const id = parseInt(input.value);
-
+//validacion
   if (isNaN(id) || id < 1 || id > 1025) {
     alert("Número inválido");
     return;
@@ -50,4 +53,20 @@ searchBtn.addEventListener("click", async () => {
     showPokemon(pokemon);
     currentId = pokemon.id;
   }
+});
+//musica
+const music = document.getElementById("bg-music");
+const toggleBtn = document.getElementById("music-toggle");
+
+let isPlaying = false;
+
+toggleBtn.addEventListener("click", () => {
+  if (!isPlaying) {
+    music.play();
+    toggleBtn.textContent = "Pausar música";
+  } else {
+    music.pause();
+    toggleBtn.textContent = "Música";
+  }
+  isPlaying = !isPlaying;
 });

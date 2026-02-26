@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="icon" href="./recursos/pokemon-removebg-preview.png" type="image">
-    <title>Pokemon</title>
+      <link rel="icon" href="./recursos/pokebola.png" type="image">
+    <title>Pokemón</title>
     <link rel="stylesheet" href="./src/css/styles.css">
 </head>
 <body>
@@ -24,12 +24,13 @@
             <p id="pokemon-id"></p>
         </div>
         <div class="buttons">
-                <button id="prev" class="btcN"><img src="./recursos/izq.png" alt="anterior" class="flecha"></button>
-                <button id="next" class="btcN"><img src="./recursos/585e47b5cb11b227491c338b.png" alt="siguiente" class="flecha"></button>
+                <button id="prev" class="btcN"><img src="./recursos/Atras.png" alt="anterior" class="flecha"></button>
+                <button id="next" class="btcN"><img src="./recursos/adelante.png" alt="siguiente" class="flecha"></button>
         </div>
         <div class="search-box">
-        <input type="number" id="pokemon-input" placeholder="Número Pokémon..." min="1">
+        <input type="number" id="pokemon-input" placeholder="Número Pokémon" min="1">
         <button id="search-btn">Buscar</button>
+        <button id="music-toggle">Música</button>
         </div>
         <div id="pokemon-modal" class="modal hidden">
         <div class="modal-content">
@@ -50,6 +51,9 @@
         </div>
     
     </section>
+    <audio id="bg-music" loop>
+        <source src="./recursos/Pokémon - ¡Atrápalos Ya (Latino) Oscar Roa Full.mp3" type="audio/mpeg">
+    </audio>
     <script type="module" src="/src/main.js"></script>
 </body>
 </html>
