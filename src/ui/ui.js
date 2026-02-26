@@ -32,7 +32,7 @@ export function showPokemon(pokemon){
   pokemon.types.forEach(t => {
   const img = document.createElement("img");
 
-  img.src = `/recursos/types/${t}.png`;
+  img.src = `./recursos/types/${t}.png`;
   img.alt = t;
   img.classList.add("type-icon");
 
